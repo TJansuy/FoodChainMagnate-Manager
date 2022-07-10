@@ -3,7 +3,8 @@ from django.db import models
 # Create your models here.
 class GameSession(models.Model):
   session_id = models.IntegerField(primary_key=True) # Force the session_id to be unique
-
+  game_open = models.BooleanField(default=False)
+  
 
 
 class GameSessionPlayers(models.Model):
