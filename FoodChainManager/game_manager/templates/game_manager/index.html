@@ -1,7 +1,9 @@
 <h1>Game Manager Index</h1>
 <p>
   Welcome
+  <ul>
   {% for sesh in sessions %}
-    <p>{{ sesh.session_id }}</p>
+    <li>Session {{ sesh.session_id }}</li>
   {% endfor %}
+  </ul
 </p>
