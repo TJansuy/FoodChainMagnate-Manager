@@ -5,6 +5,8 @@ class GameSession(models.Model):
     session_id = models.IntegerField(primary_key=True, default=1, unique=True, null=False) # Force the session_id to be unique
     game_open = models.BooleanField(default=False) # Allow game to be seen
     
+    def __str__(self):
+        return "Session " + str(self.session_id)
 
 
 class GameSessionPlayer(models.Model):
@@ -21,4 +23,4 @@ class GameSessionHistory(models.Model):
     player_id = models.ForeignKey(GameSessionPlayer, on_delete=models.RESTRICT, default=None) # The player that performed this event
     
     def __str__(self):
-        return "Turn: " + self.turn_id + " by " + self.player_id
+        return "Turn: " + str(self.turn_id) + " by " + str(self.player_id)
