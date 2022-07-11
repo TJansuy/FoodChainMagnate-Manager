@@ -18,5 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('game_manager', include('game_manager.urls')) # Add the Game Manager app urls to our site
+    path('game_manager/', include('game_manager.urls')) # Add the Game Manager app urls to our site
 ]

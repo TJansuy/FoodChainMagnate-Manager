@@ -3,7 +3,7 @@
   Welcome
   <ul>
   {% for sesh in sessions %}
-    <li>Session {{ sesh.session_id }}</li>
+    <li><a href="session/{{ sesh.session_id }}/">Session {{ sesh.session_id }}</a></li>
   {% endfor %}
   </ul
 </p>
